@@ -1,0 +1,40 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+*:focus-visible {
+	outline: none;
+}
+a {
+	text-decoration: none;
+}
+li {
+	list-style: none;
+}
+a,
+p,
+div,
+li,
+span {
+	font-size: $text-x-size;
+}
+
+// 顶部重设的 select 样式
+.select-reset-header-type {
+	width: 130px;
+	.el-select .el-select__wrapper {
+		border-radius: 16px !important;
+		.el-select__selected-item {
+			color: $main-color;
+		}
+		.el-select__caret {
+			color: $main-color;
+		}
+	}
+}
+
+// el 样式重置
+// // 分页
+// .el-pagination.is-background .el-pager li {
+// 	background: #fff;
+// }

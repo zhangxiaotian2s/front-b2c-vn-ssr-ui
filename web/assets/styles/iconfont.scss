@@ -1,0 +1,55 @@
+@font-face {
+	font-family: 'iconfont'; /* Project id 4617523 */
+	src: url('//at.alicdn.com/t/c/font_4617523_7oe8k7tvjam.woff2?t=1724311182101') format('woff2'),
+		url('//at.alicdn.com/t/c/font_4617523_7oe8k7tvjam.woff?t=1724311182101') format('woff'),
+		url('//at.alicdn.com/t/c/font_4617523_7oe8k7tvjam.ttf?t=1724311182101') format('truetype');
+}
+.iconfont {
+	font-family: 'iconfont' !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-user-01:before {
+	content: '\e601';
+}
+
+.icon-close:before {
+	content: '\e60e';
+}
+.icon-shopcart-empty:before {
+	content: '\e600';
+}
+.icon-shopcart-full:before {
+	content: '\e602';
+}
+.icon-wuliu:before {
+	content: '\e68e';
+}
+.icon-delete:before {
+	content: '\e6c7';
+}
+.icon-edit:before {
+	content: '\e607';
+}
+.icon-delete-01:before {
+	content: '\e63c';
+}
+
+.icon-user:before {
+	content: '\e608';
+}
+.icon-order:before {
+	content: '\e6e4';
+}
+.icon-dashboard:before {
+	content: '\e6f2';
+}
+
+.icon-add:before {
+	content: '\e606';
+}
+.icon-eduction:before {
+	content: '\e8af';
+}

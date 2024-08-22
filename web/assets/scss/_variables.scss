@@ -1,0 +1,42 @@
+// Font Family
+
+$josefin: 'Josefin Sans', sans-serif;
+
+$text-x-size: 14px;
+$text-xl-size: 18px;
+$text-xxl-size: 20px;
+$text-xxxl-size: 24px;
+$text-xxxxl-size: 32px;
+
+// text Colors ---------------
+$white: #ffffff;
+$black: #000000;
+$grey: #f6f7f8;
+$red: #f00;
+$green: #f6f7f8;
+$dark: #333333;
+
+$border-color: #ebebeb;
+// bg Colors ---------------
+$bg-white: #ffffff;
+$bg-black: #000000;
+$bg-grey: #f6f6f8;
+$bg-purple: #f0e0ff;
+
+// Theme Color
+$main-color: #2aa6fd;
+$assist-color-1: #02eec5;
+$assist-color-2: #2aa6fd;
+
+$main-btn-color: linear-gradient(90deg, #02eec5, #2aa6fd);
+
+// Media Queries
+
+$lg-layout: 'only screen and (min-width: 1200px)';
+$md-layout: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$sm-layout: 'only screen and (min-width: 768px) and (max-width: 991px)';
+$xs-layout: 'only screen and (max-width: 767px)';
+
+$pc-layout: 'only screen and (min-width: 1200px)';
+$pad-layout: 'only screen and (min-width: 768px) and (max-width: 1199px)';
+$h5-layout: 'only screen and (max-width: 767px)';
