@@ -35,7 +35,7 @@
 		"eslint-config-standard-vue-ts": "^1.0.5",
 		"postcss": "^8.1.0",
 		"rollup": "^2.0.0",
-		"sass": "^1.66.1",
+		"sass": "^1.77.8",
 		"sass-loader": "^10.0.0",
 		"ssr": "^6.0.0",
 		"ssr-plugin-midway": "^6.0.0",
@@ -48,7 +48,7 @@
 	},
 	"scripts": {
 		"prod": "ssr build && pm2 start pm2.config.js",
-		"prod:vite": "ssr build --vite && pm2 start pm2.config.js",
+		"prod:vite": "ssr build --vite --nominify && pm2 start pm2.config.js",
 		"prod:start": "pm2 start pm2.config.js",
 		"stop": "pm2 stop pm2.config.js",
 		"start": "ssr start",

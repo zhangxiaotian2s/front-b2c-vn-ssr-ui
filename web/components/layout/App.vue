@@ -49,10 +49,10 @@ initI18n(props.ssrApp, props.asyncData.value)
 @import '@/assets/styles/common.scss';
 @import '@/assets/styles/reset.scss';
 @import '@/assets/styles/iconfont.scss';
-@import 'swiper/css';
-@import 'swiper/css/autoplay';
-@import 'swiper/css/pagination';
-@import 'swiper/css/effect-fade';
+// @import 'swiper/css';
+// @import 'swiper/css/autoplay';
+// @import 'swiper/css/pagination';
+// @import 'swiper/css/effect-fade';
 .el-main {
 	padding: 0;
 	margin: 0;

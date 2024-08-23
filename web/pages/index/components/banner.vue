@@ -1,49 +1,9 @@
-<!-- 首页轮播图 -->
-<script lang="ts" setup>
-import { commonJump } from '@/utils/util'
-import { nextTick, onMounted } from 'vue'
-const fadeEffect: any = { crossFade: true }
-const autoplay: any = {
-	delay: 5000,
-	disableOnInteraction: false
-}
-
-/*获取父组件传入的数据*/
-const props = withDefaults(defineProps<{ comData: any }>(), {
-	comData: []
-})
-onMounted(async () => {
-	nextTick(async () => {
-		const Swiper = await import('swiper')
-		const { Pagination, EffectFade, Autoplay } = await import('swiper/modules')
-		new Swiper.default('#bannerSwiper', {
-			effect: 'fade',
-			autoplay,
-			fadeEffect,
-			lazyPreloadPrevNext: 2,
-			speed: 750,
-			loop: true,
-			modules: [Pagination, EffectFade, Autoplay],
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true
-			}
-		})
-	})
-})
-</script>
 <template>
 	<!-- Swiper配置 -->
 	<div class="slider-area">
-		<div class="swiper-container mb-100 swiper" id="bannerSwiper">
+		<div class="mb-100 swiper" id="bannerSwiper">
 			<div class="swiper-wrapper">
-				<div
-					class="swiper-slide single-slider"
-					v-for="item in comData"
-					:key="item.id"
-					:style="{ 'background-color': item.background_color ? item.background_color : '#fff' }"
-					@click="commonJump(item.jump_info, item.cmsitem_type, item.cmsitem_open)"
-				>
+				<div class="swiper-slide" v-for="item in comData" :key="item.id">
 					<!-- <div class="swiper-bg swiper-bg-left"></div> -->
 					<!-- 轮播图片 -->
 					<img :src="item.cmsitem_img_url" alt="image" class="swiper-imgs swiper-lazy" />
@@ -51,10 +11,29 @@ onMounted(async () => {
 				</div>
 			</div>
 			<!-- Add Pagination -->
-			<div class="swiper-pagination"></div>
 		</div>
 	</div>
 </template>
+
+<script lang="ts" setup>
+interface IBannerItem {
+	cmsitem_img_url: string
+	cmsitem_open: string
+	cmsitem_type: string
+	id: string
+	jump_info: string
+}
+import { nextTick, onMounted } from 'vue'
+// const fadeEffect: any = { crossFade: true }
+// sableOnInteraction: false
+// }
+/*获取父组件传入的数据*/
+defineProps<{ comData: IBannerItem[] }>()
+onMounted(async () => {
+	const Swiper = await import('swiper')
+	new Swiper.default('#bannerSwiper', {})
+})
+</script>
 
 <style lang="scss" scoped>
 .slider-area {
@@ -91,7 +70,7 @@ onMounted(async () => {
 	color: #000;
 }
 /** swiper 左右背景 */
-.single-slider {
+.swiper-slide {
 	background-color: #fff;
 	display: flex;
 	.swiper-bg {
